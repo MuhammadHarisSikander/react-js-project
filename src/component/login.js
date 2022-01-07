@@ -22,15 +22,19 @@ function Login(){
     }
 
     return(
-        <div>
+        <div style={{justifyContent:"center",display:'flex',flex:1,height:'100vh',alignItems:'center',backgroundImage:`url("https://kredo.jp/wp/wp-content/uploads/2019/02/ai-artificial-intelligence-code-34676-1.jpg")`}} >
+            <div style={{display:'block',textAlign:'center'}}>
             <h1>Please Login</h1>
-            <form onSubmit={onsubmitform}>
-            <input type="text" placeholder='UserName' onChange={(e)=>setUsername(e.target.value)} />
+            <form onSubmit={onsubmitform} >
+            <input type="text" placeholder='User Name' onChange={(e)=>setUsername(e.target.value)} style={{padding:'10px'}} />
             <br/>
-            <input type="password" placeholder='password' onChange={(e)=>setPassword(e.target.value)} />
+            <br/>
+            <input type="password" placeholder='Password' onChange={(e)=>setPassword(e.target.value)}style={{padding:'10px'}} />
+            <br/>
             <br/>
             <input type="submit" placeholder='password' />
             </form>
+            </div>
         </div>
     )
 }
