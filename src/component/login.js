@@ -7,14 +7,23 @@ function Login(){
     const [password, setPassword] = useState()
     const [login, setLogin] = useState(false)
 
-    let onsubmitform=(e)=>{
-        e.preventDefault()
-        if(username === "A" && password === "B"){
-            localStorage.setItem("token","1234567")
-        }
-     console.log("Password", password);
-     setLogin(true)
-    }
+
+     
+           let onsubmitform=(e)=>{
+            e.preventDefault()
+            setTimeout(()=>{
+                if(username === "A" && password === "B"){
+                    localStorage.setItem("token","1234567")
+                }
+             console.log("Password", password);
+             setLogin(true)
+            },9000)
+
+
+                
+            }
+  
+
 
 
     if(localStorage.getItem("token")){
